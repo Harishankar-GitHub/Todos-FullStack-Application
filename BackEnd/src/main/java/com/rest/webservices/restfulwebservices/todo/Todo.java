@@ -9,7 +9,7 @@ import javax.persistence.Id;
 @Entity
 public class Todo {
 
-	@Id
+	@Id							// @Id should have a wrapper class & not a primitive
 	@GeneratedValue
 	private Long id;
 	private String username;
