@@ -1,15 +1,15 @@
 package com.rest.webservices.restfulwebservices.todo;
 
+import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import org.springframework.stereotype.Service;
-
 @Service
 public class TodoHardCodedService {
 	
-	private static List<Todo> todos = new ArrayList();
+	private static List<Todo> todos = new ArrayList<>();
 	private static long idCounter = 0;
 	
 	static
@@ -26,16 +26,16 @@ public class TodoHardCodedService {
 	
 	public Todo save(Todo todo)
 	{
-		if(todo.getId()==-1 || todo.getId()==0)
+		if(todo.getId() == null || todo.getId() == -1 || todo.getId() == 0)
+//		if (todo.getId() == null)
 		{
 			todo.setId(++idCounter);
-			todos.add(todo);
 		}
 		else
 		{
 			deleteById(todo.getId());
-			todos.add(todo);
 		}
+		todos.add(todo);
 		return todo;
 	}
 	

@@ -1,8 +1,5 @@
 package com.rest.webservices.restfulwebservices.todo;
 
-import java.net.URI;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +12,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+import java.net.URI;
+import java.util.List;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
@@ -25,7 +24,7 @@ public class TodoJPAResource {
 	
 	@Autowired
 	private TodoJPARepository todoJPARepository;
-	
+
 	@GetMapping("/jpa/users/{username}/todos")		//GET Method
 	public List<Todo> getAllTodos(@PathVariable String username)
 	{
@@ -40,7 +39,7 @@ public class TodoJPAResource {
 		return todoJPARepository.findById(id).get();	// findById is a predefined method in JPA Repository.
 														// todoJPARepository.findById(id) is enough. 
 														//	But .get() method is used because findById() method would 
-														//	return an Optional. To get that, .get() method is used.
+														//	return an Optional. To get id from that, .get() method is used.
 														// 2 types of usage : local variable = todoJPARepository.findById(id);
 														// OR return todoJPARepository.findById(id).get();
 //		return todoService.findById(id);
