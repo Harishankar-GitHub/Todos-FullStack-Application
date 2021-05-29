@@ -17,8 +17,8 @@ import java.util.List;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
-public class TodoJPAResource {
-	
+public class TodoJPAResource
+{
 //	@Autowired
 //	private TodoHardCodedService todoService;		// Commented this because we have created JPA Repository for Todo
 	

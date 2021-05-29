@@ -2,8 +2,8 @@ package com.rest.webservices.restfulwebservices;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-public class BcryptEncoderTest {
-	
+public class BcryptEncoderTest
+{
 	public static void main(String args[])
 	{
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
@@ -13,7 +13,5 @@ public class BcryptEncoderTest {
 			String encodedString = encoder.encode("Harish123");
 			System.out.println(encodedString);
 		}
-		
 	}
-
 }

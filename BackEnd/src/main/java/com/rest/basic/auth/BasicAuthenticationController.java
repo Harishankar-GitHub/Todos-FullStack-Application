@@ -6,13 +6,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
-public class BasicAuthenticationController {
-	
+public class BasicAuthenticationController
+{
 	@GetMapping(path="/basicAuth")
 	public AuthenticationBean helloWorldBean()
 	{
 //		throw new RuntimeException("Some error occurred. Contact support at ***-***");
 		return new AuthenticationBean("You are authenticated");
 	}
-
 }

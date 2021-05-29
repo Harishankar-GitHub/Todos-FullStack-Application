@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
-public class HelloWorldController {
-	
+public class HelloWorldController
+{
 	@GetMapping(path="/hello-world")
 	public String helloWorld()
 	{
@@ -27,5 +27,4 @@ public class HelloWorldController {
 	{
 		return new HelloWorldBean(String.format("Hello World, %s", name));
 	}
-
 }

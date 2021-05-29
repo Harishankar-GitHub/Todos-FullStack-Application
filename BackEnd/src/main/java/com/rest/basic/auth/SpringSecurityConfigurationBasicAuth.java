@@ -6,9 +6,11 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 
 //@Configuration			//Commenting because added JWT
 //@EnableWebSecurity		//Commenting because added JWT
-public class SpringSecurityConfigurationBasicAuth extends WebSecurityConfigurerAdapter{
+public class SpringSecurityConfigurationBasicAuth extends WebSecurityConfigurerAdapter
+{
 	@Override
-	protected void configure(HttpSecurity http) throws Exception {
+	protected void configure(HttpSecurity http) throws Exception
+	{
 		http
 		.csrf().disable()
 		.authorizeRequests()
